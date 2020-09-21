@@ -47,5 +47,14 @@ require_relative '../lib/word_wrap'
         end
     end
 
+    describe '10 word input where all words are the same length as column' do
+        it 'returns "derek" on ten lines when the column number is 5' do
+            expect(Wrapper.wrap("derek derek derek derek derek derek derek derek derek derek", 5)).to eq("derek\nderek\nderek\nderek\nderek\nderek\nderek\nderek\nderek\nderek")
+        end
+    end
+
+
+
+
 
 #end

@@ -25,7 +25,7 @@ require_relative '../lib/word_wrap'
 
     describe '1 word input that is not same length as column' do
         it 'returns "hell\no" on one line when the column number is 5' do
-            expect(Wrapper.wrap("hello", 4)).to eq("hell\no")
+            expect(Wrapper.wrap("hello", 4)).to eq("hell\naw")
         end
     end
 

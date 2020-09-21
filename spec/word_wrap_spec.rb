@@ -23,13 +23,6 @@ require_relative '../lib/word_wrap'
         end
     end
 
-    describe '1 word input that is not same length as column' do
-        it 'returns "hell\no" on one line when the column number is 5' do
-            expect(Wrapper.wrap("hello", 4)).to eq("hell\no")
-        end
-    end
-
-
     describe '2 word input where one word is the same length as column' do
         it 'returns "hello world" on two lines when the column number is 5' do
             expect(Wrapper.wrap("hello world", 5)).to eq("hello\nworld")
@@ -59,6 +52,13 @@ require_relative '../lib/word_wrap'
             expect(Wrapper.wrap("derek derek derek derek derek derek derek derek derek derek", 5)).to eq("derek\nderek\nderek\nderek\nderek\nderek\nderek\nderek\nderek\nderek")
         end
     end
+
+    describe '1 word input that is not same length as column' do
+        it 'returns "hell\no" on one line when the column number is 5' do
+            expect(Wrapper.wrap("hello", 4)).to eq("hell\no")
+        end
+    end
+
 
 
 

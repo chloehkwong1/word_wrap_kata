@@ -12,6 +12,9 @@ class Wrapper
         if split_word.length == 3
             return "#{split_word[0]}\n#{split_word[1]}\n#{split_word[2]}"
         end
+        if split_word.length == 4
+            return "#{split_word[0]}\n#{split_word[1]}\n#{split_word[2]}\n#{split_word[3]}"
+        end
 
     end
 
